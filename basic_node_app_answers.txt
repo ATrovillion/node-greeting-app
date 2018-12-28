@@ -1,0 +1,14 @@
+What is a Node module?
+
+A Node module is a set of functions that can be imported or included in an application. Modules work similarly to JavaScript libraries.
+
+What is the main difference between exports and module.exports?
+
+Module.exports is a variable that gets returned from a require() statement. It is empty by default, and can be changed to anything.
+Exports, on the other hand, is never returned. It is an alias used as a reference to module.exports, and can be used as a convenience variable to help in writing leaner code.
+
+Why is using exports recommended?
+
+The use of exports is recommended because errors in its use (e.g., erroneous assignment) don't prevent the use of imported modules. If, on the other hand, an erroneous
+change were to be made to module.exports, the thing itself (i.e., module.exports, the thing to which exports merely serves as a reference) is changed, and functionality
+could be lost.
